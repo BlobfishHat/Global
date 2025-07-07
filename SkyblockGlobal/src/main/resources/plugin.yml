@@ -1,0 +1,4 @@
+name: SkyblockGlobal
+version: '1.0-SNAPSHOT'
+main: me.blobfishhat.skyblockGlobal.SkyblockGlobal
+api-version: '1.21'
