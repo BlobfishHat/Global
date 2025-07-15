@@ -1,0 +1,27 @@
+name: RandomBlockDrops
+version: '1.0-SNAPSHOT'
+main: me.blobfishhat.randomBlockDrops.RandomBlockDrops
+api-version: '1.21'
+description: A plugin that adds random drops to blocks when broken
+author: blobfishhat
+
+commands:
+  randomblockdrops:
+    description: Main command for RandomBlockDrops
+    usage: /<command> [subcommand]
+    aliases: [rbd, randomdrops]
+    permission: randomblockdrops.use
+
+permissions:
+  randomblockdrops.use:
+    description: Allows basic use of the plugin
+    default: true
+  randomblockdrops.gui:
+    description: Allows access to the GUI
+    default: op
+  randomblockdrops.admin:
+    description: Allows administrative functions
+    default: op
+  randomblockdrops.list:
+    description: Allows listing configured blocks
+    default: true

@@ -1,0 +1,57 @@
+# RandomBlockDrops Configuration File
+# This file contains all the settings for the RandomBlockDrops plugin
+
+# Enable or disable the plugin functionality
+enabled: true
+
+# Send a message to players when they get a random drop
+notify-on-drop: false
+
+# CHAOS MODE - Complete randomization settings
+# When enabled, EVERYTHING drops random items (100% rate)
+# This affects: blocks, mobs, fishing, ALL item drops
+# Each block type will consistently drop the same random item
+complete-randomization:
+  enabled: false
+
+# Persistent random drops - automatically managed
+# Each block type gets assigned a consistent random item
+# Use /rbd resetrandom to clear and regenerate mappings
+persistent-random-drops:
+  # This section is automatically populated when chaos mode is used
+  # Example:
+  # stone:
+  #   material: diamond
+  #   amount: 2
+
+# Block configurations
+# Each block can have either:
+# - A list of possible drops (custom items) - 100% drop rate
+# - A loot-table (uses Minecraft's built-in loot tables) - 100% drop rate
+blocks:
+  stone:
+    drops:
+      - material: diamond
+        amount: 1
+      - material: emerald
+        amount: 1
+      - material: gold_ingot
+        amount: 2
+
+  oak_log:
+    drops:
+      - material: apple
+        amount: 3
+      - material: stick
+        amount: 5
+
+  dirt:
+    drops:
+      - material: bone_meal
+        amount: 2
+      - material: wheat_seeds
+        amount: 3
+
+  # Example of using a loot table instead of custom drops
+  # grass_block:
+  #   loot-table: chests/end_city_treasure
